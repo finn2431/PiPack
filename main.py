@@ -143,7 +143,7 @@ def Leerstelle():
 colorama.init()
 
 print(Fore.RED + "Program installer for Raspberry pi" + Style.RESET_ALL)
-print(Fore.RED + "Copyright by Finn Drölle" + Style.RESET_ALL)
+print(Fore.RED + "Copyright by Finn2431" + Style.RESET_ALL)
 print(Fore.RED + 'To See the license of The Icon, type "license"' + Style.RESET_ALL)
 print("")
 print("Choose an category:")
