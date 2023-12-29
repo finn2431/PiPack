@@ -1,6 +1,6 @@
-To install this program, save the "Installer" folder (the folder in which this file is located) in your home directory. Then perform the following steps in the terminal:
+To install this program, save the "PiPack" folder (the folder in which this file is located) in your home directory. Then perform the following steps in the terminal:
 
-1) cd Installer
+1) cd PiPack
 
 2) chmod +x install.sh
 
