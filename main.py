@@ -163,7 +163,7 @@ category = input("Coose an category (Say The Number):")
 if category == "1":  # Games
     Leerstelle()
     List_games()
-    auswahl()
+    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
     install = input()
     minetest()
     chromium_bsu()     #(Überarbeiten, da nicht funktioniert)
@@ -176,7 +176,7 @@ if category == "2":  # Development
 if category == "3":  # Office
     Leerstelle()
     List_office()
-    auswahl()
+    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
     install = input()
     libreoffice()
     a = input()
@@ -184,7 +184,7 @@ if category == "3":  # Office
 if category == "4":  # Internet
     Leerstelle()
     List_Internet()
-    auswahl()
+    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
     install = input()
     claws_mail()
     firefox()
@@ -193,7 +193,7 @@ if category == "4":  # Internet
 
 if category == "5":  # Graphic
     List_Graphic()
-    auswahl()
+    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
     Gimp()
     a = input()
 
@@ -202,7 +202,7 @@ if category == "6":  # System Tools
     a = input()
 if category == "7":  # Accessory
     List_Accessory()
-    auswahl()
+    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
     emacs()
     a = input()
 
