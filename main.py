@@ -10,13 +10,15 @@ import subprocess
 
 # ------------------------ DEFINIEREN ANFANG --------------------------------------------
 
+def auswahl():
+    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
+
 # def Auswahl():
     # print("Choose an Program that you want to Install or Uninstall:")
     # install = input()
 
 install = "Standard"
 def minetest():
-    install = input()
     if install == "Minetest":
         print("Currently installing this Programm (because im are a good Programm *_* )")
         # Name der .sh-Datei
@@ -59,6 +61,8 @@ def claws_mail():
         sh_file_path = os.path.join(games_dir, sh_file_name)
         # Führe das Skript im Hintergrund aus
         subprocess.Popen(["bash", sh_file_path])
+    else: 
+        firefox()
 def List_games():
     print(Fore.CYAN + "Minetest" + Style.RESET_ALL + "      "   "An Open-Source Free Minecraft Clone")
     print(Fore.CYAN + "Chromium BSU" + Style.RESET_ALL + "      "   " Fast-paced open-source spaceship shoot'em-up game")
@@ -67,7 +71,6 @@ def List_office():
     print(Fore.CYAN + "Libre Office" + Style.RESET_ALL + "      "   "An Open Source Microsoft Word, Excel and powerpoint clone")
 
 def libreoffice():
-    install = input()
     if install == "Libre Office":
         print("Currently installing this Programm (because im are a good Programm *_* )")
         # Name der .sh-Datei
@@ -160,6 +163,7 @@ category = input("Coose an category (Say The Number):")
 if category == "1":  # Games
     Leerstelle()
     List_games()
+    auswahl()
     install = input()
     minetest()
     chromium_bsu()     #(Überarbeiten, da nicht funktioniert)
@@ -172,12 +176,15 @@ if category == "2":  # Development
 if category == "3":  # Office
     Leerstelle()
     List_office()
+    auswahl()
+    install = input()
     libreoffice()
     a = input()
 
 if category == "4":  # Internet
     Leerstelle()
     List_Internet()
+    auswahl()
     install = input()
     claws_mail()
     firefox()
@@ -186,6 +193,7 @@ if category == "4":  # Internet
 
 if category == "5":  # Graphic
     List_Graphic()
+    auswahl()
     Gimp()
     a = input()
 
@@ -194,6 +202,7 @@ if category == "6":  # System Tools
     a = input()
 if category == "7":  # Accessory
     List_Accessory()
+    auswahl()
     emacs()
     a = input()
 
