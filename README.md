@@ -10,4 +10,7 @@ To install this program, save the "PiPack" folder (the folder in which this file
 
 3) ./install.sh
 
+4) python3 main.py
+   
+
 Once you have completed these steps, you can now open the program by clicking on the program's icon.
