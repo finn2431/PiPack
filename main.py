@@ -18,21 +18,6 @@ def auswahl():
     # install = input()
 
 install = "Standard"
-
-def gparted():
-    if install == "GParted":
-        print("Currently installing this Programm (because im are a good Programm *_* )")
-        # Name der .sh-Datei
-        sh_file_name = "gparted.sh"
-        # Ermittle den Pfad zum Verzeichnis, in dem sich das Python-Programm befindet
-        python_script_dir = os.path.dirname(os.path.abspath(__file__))
-        # Erstelle den Pfad zum "Games"-Unterordner
-        games_dir = os.path.join(python_script_dir, "System_Tools")
-        # Erstelle den absoluten Pfad zur .sh-Datei
-        sh_file_path = os.path.join(games_dir, sh_file_name)
-        # Führe das Skript im Hintergrund aus
-        subprocess.Popen(["bash", sh_file_path])
-
 def minetest():
     if install == "Minetest":
         print("Currently installing this Programm (because im are a good Programm *_* )")
@@ -76,8 +61,7 @@ def claws_mail():
         sh_file_path = os.path.join(games_dir, sh_file_name)
         # Führe das Skript im Hintergrund aus
         subprocess.Popen(["bash", sh_file_path])
-    else: 
-        firefox()
+
 def List_games():
     print(Fore.CYAN + "Minetest" + Style.RESET_ALL + "      "   "An Open-Source Free Minecraft Clone")
     print(Fore.CYAN + "Chromium BSU" + Style.RESET_ALL + "      "   " Fast-paced open-source spaceship shoot'em-up game")
@@ -115,11 +99,26 @@ def Gimp():
         subprocess.Popen(["bash", sh_file_path])
 
 def emacs():
-    install = input()
     if install == "Emacs":
         print("Currently installing this Programm (because im are a good Programm *_* )")
         # Name der .sh-Datei
         sh_file_name = "emacs.sh"
+        # Ermittle den Pfad zum Verzeichnis, in dem sich das Python-Programm befindet
+        python_script_dir = os.path.dirname(os.path.abspath(__file__))
+        # Erstelle den Pfad zum "Games"-Unterordner
+        games_dir = os.path.join(python_script_dir, "Accessory")
+        # Erstelle den absoluten Pfad zur .sh-Datei
+        sh_file_path = os.path.join(games_dir, sh_file_name)
+        # Führe das Skript im Hintergrund aus
+        subprocess.Popen(["bash", sh_file_path])
+
+        
+def pitext():
+    if install == "PiText":
+        print("Currently installing this Programm (because im are a good Programm *_* )")
+        print(Fore.RED + 'IMPORTANT: When the installation was Sucessfully, you must stop running the program, open a terminal and type "cd PiText" and after that you must type "python3 main.py"' + Style.RESET_ALL) 
+        # Name der .sh-Datei
+        sh_file_name = "pitext.sh"
         # Ermittle den Pfad zum Verzeichnis, in dem sich das Python-Programm befindet
         python_script_dir = os.path.dirname(os.path.abspath(__file__))
         # Erstelle den Pfad zum "Games"-Unterordner
@@ -142,9 +141,7 @@ def firefox():
         sh_file_path = os.path.join(games_dir, sh_file_name)
         # Führe das Skript im Hintergrund aus
         subprocess.Popen(["bash", sh_file_path])
-def List_System_Tools():
-     print(Fore.CYAN + "GParted" + Style.RESET_ALL + "      "   "An Open Source and CPU economical Memory editor")
-
+        
 def List_Internet():
     print(Fore.CYAN + "Claws Mail" + Style.RESET_ALL + "      "   "An Open Source and CPU economical Mail Client")
     print(Fore.CYAN + "Firefox" + Style.RESET_ALL + "      "   "Browser")
@@ -154,6 +151,7 @@ def List_Graphic():
 
 def List_Accessory():
     print(Fore.CYAN + "Emacs" + Style.RESET_ALL + "      "   "An Open Source Terminal + GUI Text Editor")
+    print(Fore.CYAN + "PiText" + Style.RESET_ALL + "      "   "An Open Source and CPU-Enomical Text editor in Minimal design with a lot of Functions")
 
 
 def Leerstelle():
@@ -215,14 +213,15 @@ if category == "5":  # Graphic
     a = input()
 
 if category == "6":  # System Tools
-    List_System_Tools()
-    print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
-    gparted()
+    print("No program available for this category")
     a = input()
 if category == "7":  # Accessory
+    Leerstelle()
     List_Accessory()
     print(Fore.RED + "Choose a Program that you want to install (type his name with the right sspelling)" + Style.RESET_ALL)
+    install = input()
     emacs()
+    pitext()
     a = input()
 
 
